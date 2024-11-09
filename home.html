@@ -2,123 +2,208 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food Donate</title>
-    <link rel="stylesheet" href="home.css">
+    <title>Food Forward</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        /* Background Color Animation */
+        @keyframes lightBackground {
+            0% {
+                background: #e0f7fa;
+            }
+            25% {
+                background: #f1f8e9;
+            }
+            50% {
+                background: #ffebee;
+            }
+            75% {
+                background: #f0f4c3;
+            }
+            100% {
+                background: #e0f7fa;
+            }
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+            animation: lightBackground 15s ease-in-out infinite;
+            background-size: 100% 100%;
+        }
+
+        header {
+            background: #06C167;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #fff;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .nav-bar {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-bar a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .nav-bar a:hover {
+            text-decoration: underline;
+        }
+
+        .banner {
+            text-align: center;
+            margin: 50px auto;
+        }
+
+        .donate-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background-color: #06C167;
+            color: #fff;
+            text-decoration: none;
+            font-size: 22px;
+            font-weight: 600;
+            border-radius: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+            animation: pulse 3s infinite;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .donate-button:hover {
+            background-color: #04a357;
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .content h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            color: #06C167;
+            animation: colorChange 6s infinite;
+        }
+
+        .content h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #04a357;
+        }
+
+        .content p {
+            font-size: 20px;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .footer {
+            background: #06C167;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-top: 5px solid #04a357;
+        }
+
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            }
+            50% {
+                transform: scale(1.05);
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            }
+        }
+
+        @keyframes colorChange {
+            0%, 100% {
+                color: #06C167;
+            }
+            50% {
+                color: #04a357;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
-        <div class="logo">Food <b style="color: #06C167;">Donate</b></div>
-        <div class="hamburger">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-        </div>
+        <div class="logo">Food <b>Forward</b></div>
         <nav class="nav-bar">
-            <ul>
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="about.html" >About</a></li>
-                <li><a href="contact.html" >Contact</a></li>
-                <li><a href="profile.php" >Profile</a></li>
-                <!-- <li ><a href="fooddonate.html"  >Donate</a></li> -->
-            </ul>
+            <a href="#home" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="profile.php">Profile</a>
         </nav>
     </header>
-    <script>
-        hamburger=document.querySelector(".hamburger");
-        hamburger.onclick =function(){
-            navBar=document.querySelector(".nav-bar");
-            navBar.classList.toggle("active");
-        }
-    </script>
+
     <section class="banner">
-        <a href="fooddonateform.php">Dontae Food</a>
+        <a href="fooddonateform.php" class="donate-button">Donate Food</a>
     </section>
+
     <div class="content">
-        <!-- <h2>Love Food</h2>
-        <h3>Hate Wasting</h3> -->
-        <p style="font-size: 23px;">
-            “Cutting food waste is a delicious way of saving money, helping to feed the world and protect the planet.” 
+        <h2>Love Food</h2>
+        <h3>Hate Wasting</h3>
+        <p>
+            “Cutting food waste is a delicious way of saving money, helping to feed the world, and protecting the planet.”
         </p>
-       
     </div>
+
     <div class="photo">
-        <br>
-        <p class="heading">Our Works</p>
-        <br>
-        <p style="font-size: 28px; text-align: center;">"Look what we can do together."</p>
-       <br>
-        <div class="wrapper">
-          <div class="box"><img src="img/p1.jpeg" alt=""></div>
-          <div class="box"><img src="img/p4.jpeg" alt=""></div>
-          <div class="box"><img src="img/p3.jpeg" alt=""></div>
+        <p class="heading" style="text-align: center; font-size: 28px; font-weight: 600;">Our Works</p>
+        <p style="font-size: 24px; text-align: center; margin: 10px auto;">"Look what we can do together."</p>
+        <div class="wrapper" style="display: flex; justify-content: center; gap: 20px; margin-top: 20px;">
+            <div class="box"><img src="img/p1.jpeg" alt="Work 1" style="width: 300px; border-radius: 10px;"></div>
+            <div class="box"><img src="img/p4.jpeg" alt="Work 2" style="width: 300px; border-radius: 10px;"></div>
+            <div class="box"><img src="img/p3.jpeg" alt="Work 3" style="width: 300px; border-radius: 10px;"></div>
         </div>
-        <!-- <p style="font-size: 19px;"> Th  e basic concept of this project  Food Waste Management is to collect theexcess/leftover food from donors such as hotels, restaurants, marriage halls, etc and distribute to  the  needy people .
-        </p> -->
-        <br>
-        
-    
-     
-        
     </div>
-    <div class="deli" style="display: grid;" >
-      <p class="heading">PICKUP SERVICE</p>
-      <br>
-      <p  class="para">"Your donate will be immediately collected and sent to needy people "</p>
-      <img src="img/delivery.gif" alt="" style="margin-left:auto; margin-right: auto;">
 
+    <div class="deli" style="text-align: center; padding: 30px 0;">
+        <p class="heading" style="font-size: 28px; color: #06C167;">PICKUP SERVICE</p>
+        <p class="para" style="font-size: 20px; margin-bottom: 20px;">"Your donation will be immediately collected and sent to those in need."</p>
+        <img src="img/delivery.gif" alt="Delivery" style="width: 200px;">
     </div>
-    <div class="ser">
-      <!-- <p class="heading">Our Services</p> -->
-      
-    </div>
+
     <footer class="footer">
-        <div class="footer-left col-md-4 col-sm-6">
-          <p class="about">
-            <span> About us</span>The basic concept of this project  Food Waste Management is to collect the excess/leftover  food from donors such as hotels, restaurants, marriage halls , etc and distribute to  the  needy people .
-     </p>
-        
-        </div>
-        <div class="footer-center col-md-4 col-sm-6">
-          <div>
-            <p><span> Contact</span> </p>
-            
-          </div>
-          <div>
-        
-            <p> (+91) 98260 00000</p>
-            
-          </div>
-          <div>
-            <!-- <i class="fa fa-envelope" style="font-size: 17px;
-            line-height: 38px; color:white;"></i> -->
-            <p><a href="#"> Fooddonate@gmail.com</a></p>
-          </div>
-          
-          <div class="sociallist">
-            <ul class="social">
-            <li><a href="https://www.facebook.com/TheAkshayaPatraFoundation/"><img src="https://i.ibb.co/x7P24fL/facebook.png"></a></li>
-            <li><a href="https://twitter.com/globalgiving"><img src="https://i.ibb.co/Wnxq2Nq/twitter.png"></a></li>
-            <li><a href="https://www.instagram.com/charitism/"><img src="https://i.ibb.co/ySwtH4B/instagram.png"></a></li>
-            <li><a href="https://web.whatsapp.com/"><i class="fa fa-whatsapp" style="font-size:50px;color: black;"></i></a></li>
-           </ul>
-          </div>
-        </div>
-        <div class="footer-right col-md-4 col-sm-6">
-          <h2> Food<span> Donate</span></h2>
-          <!-- <h2>Food donate</h2> -->
-          <p class="menu">
-            <a href="#"> Home</a> |
-            <a href="about.html"> About</a> |
-            <a href="profile.php"> Profile</a> |
-            <a href="contact.html"> Contact</a>
-          </p>
-          <p class="name"> Food Donate &copy 2023</p>
-        </div>
-      </footer>
-
-    
+        <p>About us: This initiative aims to collect surplus food from donors, including hotels, restaurants, and event venues, and redistribute it to those in need, fostering a community of support and minimizing food waste.</p>
+        <p>Contact us: (+91) 98260 00000 | <a href="mailto:Fooddonate@gmail.com">Fooddonate@gmail.com</a></p>
+        <p class="name">Food Forward &copy; 2024</p>
+    </footer>
 </body>
 </html>

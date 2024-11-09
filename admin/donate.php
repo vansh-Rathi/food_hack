@@ -99,8 +99,8 @@ if($_SESSION['name']==''){
         
         <div class="top">
             <i class="uil uil-bars sidebar-toggle"></i>
-            <!-- <p>Food Donate</p> -->
-            <p  class ="logo" >Food <b style="color: #06C167; ">Donate</b></p>
+            <!-- <p>Food Forward</p> -->
+            <p  class ="logo" >Food <b style="color: #06C167; ">Forward</b></p>
              <p class="user"></p>
             <!-- <div class="search-box">
                 <i class="uil uil-search"></i>
@@ -144,7 +144,7 @@ if($_SESSION['name']==''){
       
       // If there are results, display them in a table
       if ($result->num_rows > 0) {
-        // echo "<h2>Food Donate in $location:</h2>";
+        // echo "<h2>Food Forward in $location:</h2>";
         
         echo" <div class=\"table-container\">";
         echo "    <div class=\"table-wrapper\">";

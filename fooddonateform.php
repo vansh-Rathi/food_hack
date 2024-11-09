@@ -45,14 +45,14 @@ if(isset($_POST['submit']))
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food Donate</title>
+    <title>Food Forward</title>
     <link rel="stylesheet" href="loginstyle.css">
 </head>
 <body style="    background-color: #06C167;">
     <div class="container">
         <div class="regformf" >
     <form action="" method="post">
-        <p class="logo">Food <b style="color: #06C167; ">Donate</b></p>
+        <p class="logo">Food <b style="color: #06C167; ">Forward</b></p>
         
        <div class="input">
         <label for="foodname"  > Food Name:</label>

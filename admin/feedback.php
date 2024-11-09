@@ -99,7 +99,7 @@ if($_SESSION['name']==''){
         
         <div class="top">
             <i class="uil uil-bars sidebar-toggle"></i>
-            <!-- <p>Food Donate</p> -->
+            <!-- <p>Food Forward</p> -->
             <p  class ="logo" >Feed<b style="color: #06C167; ">back</b></p>
              <p class="user"></p>
             <!-- <div class="search-box">
